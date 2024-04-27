@@ -51,6 +51,7 @@ share/marc2bibframe2.xsl
 share/naco-normalize.xsl
 share/utils.xsl
 share/variables.xsl
+SIGNATURE
 t/NKC-Transform-MARC2BIBFRAME/01-use.t
 t/NKC-Transform-MARC2BIBFRAME/02-version.t
 xt/NKC-Transform-MARC2BIBFRAME/01-pod_coverage.t
