@@ -8,7 +8,7 @@ use File::Share ':all';
 use XML::LibXML;
 use XML::LibXSLT;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 sub new {
 	my ($class, @params) = @_;
