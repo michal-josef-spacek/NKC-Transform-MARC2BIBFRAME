@@ -30,6 +30,19 @@ sub new {
 	return $self;
 }
 
+sub version {
+	my $self = shift;
+
+	my $dom = $self->{'_xml_parser'}->load_xml(
+		'location' => dist_file('NKC-Transform-MARC2BIBFRAME', catfile('2.5.0', 'variables.xsl')),
+	);
+
+	my $version = $dom->findvalue('//xsl:variable[@name="vCurrentVersion"]');
+	$version =~ s/^v//ms;
+
+	return $version;
+}
+
 sub transform {
 	my ($self, $marc_xml) = @_;
 
