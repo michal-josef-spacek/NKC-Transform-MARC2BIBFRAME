@@ -19,6 +19,7 @@ name 'NKC-Transform-MARC2BIBFRAME';
 readme_from 'MARC2BIBFRAME.pm';
 recursive_author_tests('xt');
 requires 'Class::Utils' => 0;
+requires 'File::Spec::Functions' => 0;
 requires 'File::Share' => 0;
 requires 'XML::LibXML' => 0;
 requires 'XML::LibXSLT' => 0;

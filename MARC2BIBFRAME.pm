@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Class::Utils qw(set_params);
+use File::Spec::Functions qw(catfile);
 use File::Share ':all';
 use XML::LibXML;
 use XML::LibXSLT;
@@ -18,7 +19,7 @@ sub new {
 
 	# XSLT transformation file.
 	$self->{'xslt_transformation_file'} = dist_file('NKC-Transform-MARC2BIBFRAME',
-		'marc2bibframe2.xsl');
+		catfile('2.5.0', 'marc2bibframe2.xsl'));
 
 	# Process parameters.
 	set_params($self, @params);
