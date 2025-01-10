@@ -1,5 +1,6 @@
 0.02
  - Add constructor tests.
+ - Add tests for transform().
  - Add version() method.
  - Move XSLT transformation files to versioned directory.
  - Update Module::Install to 1.21 version.
