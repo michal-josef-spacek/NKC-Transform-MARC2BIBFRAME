@@ -3,6 +3,7 @@
  - Add constructor tests.
  - Add tests for transform().
  - Add version() method.
+ - Add 'version' parameter.
  - Move XSLT transformation files to versioned directory.
  - Update Module::Install to 1.21 version.
  - Update copyright years.
