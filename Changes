@@ -1,5 +1,6 @@
 0.02
  - Move XSLT transformation files to versioned directory.
+ - Update Module::Install to 1.21 version.
 
 0.01 2024-04-27T12:49:36+02:00
  - First version.
