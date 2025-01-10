@@ -54,5 +54,6 @@ share/2.5.0/variables.xsl
 SIGNATURE
 t/NKC-Transform-MARC2BIBFRAME/01-use.t
 t/NKC-Transform-MARC2BIBFRAME/02-version.t
+t/NKC-Transform-MARC2BIBFRAME/03-new.t
 xt/NKC-Transform-MARC2BIBFRAME/01-pod_coverage.t
 xt/NKC-Transform-MARC2BIBFRAME/02-pod.t
