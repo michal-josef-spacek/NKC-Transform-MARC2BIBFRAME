@@ -74,3 +74,13 @@ sub transform {
 }
 
 1;
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+NKC::Transform::MARC2BIBFRAME - marc2bibframe transformation class.
+
+=cut

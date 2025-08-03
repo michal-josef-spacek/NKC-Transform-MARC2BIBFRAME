@@ -1,6 +1,7 @@
 0.02
  - Add check to 'xslt_transformation_file' parameter.
  - Add constructor tests.
+ - Add doc stub.
  - Add tests for transform().
  - Add version() method.
  - Add 'version' parameter.
