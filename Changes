@@ -4,6 +4,7 @@
  - Add constructor tests.
  - Add doc stub.
  - Add tests for transform().
+ - Add tests for version().
  - Add version() method.
  - Add 'version' parameter.
  - Move XSLT transformation files to versioned directory.
