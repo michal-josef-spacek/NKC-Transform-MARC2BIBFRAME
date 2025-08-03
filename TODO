@@ -1,7 +1,6 @@
 TODO
 ====
 1. Doc
-3. Add new versions.
 4. Add information about Czech National Library to doc.
 5.
 
@@ -9,3 +8,7 @@ Applied
 =======
 2. Tests.
 OK [20250110] skim
+
+3. Add new versions.
+2.10.0 version
+OK [20250803] skim
