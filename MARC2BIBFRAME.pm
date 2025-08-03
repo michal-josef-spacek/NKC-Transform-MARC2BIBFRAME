@@ -51,7 +51,7 @@ sub version {
 	my $self = shift;
 
 	my $dom = $self->{'_xml_parser'}->load_xml(
-		'location' => dist_file('NKC-Transform-MARC2BIBFRAME', catfile('2.5.0', 'variables.xsl')),
+		'location' => dist_file('NKC-Transform-MARC2BIBFRAME', catfile($self->{'version'}, 'variables.xsl')),
 	);
 
 	my $version = $dom->findvalue('//xsl:variable[@name="vCurrentVersion"]');
