@@ -61,14 +61,14 @@ sub version {
 }
 
 sub transform {
-	my ($self, $marc_xml) = @_;
+	my ($self, $marc_xml, @params) = @_;
 
 	my $marc_xml_input = $self->{'_xml_parser'}->load_xml('string' => $marc_xml);
 	my $style_doc = $self->{'_xml_parser'}->parse_file($self->{'xslt_transformation_file'});
 
 	my $stylesheet = $self->{'_xslt'}->parse_stylesheet($style_doc);
 
-	my $results = $stylesheet->transform($marc_xml_input);
+	my $results = $stylesheet->transform($marc_xml_input, @params);
 
 	return $stylesheet->output_string($results);
 }
