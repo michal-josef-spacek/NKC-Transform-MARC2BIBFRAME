@@ -122,6 +122,9 @@ share/2.9.0/naco-normalize.xsl
 share/2.9.0/utils.xsl
 share/2.9.0/variables.xsl
 SIGNATURE
+t/data/ex1-2.10.0-expected.xml
+t/data/ex1-2.5.0-expected.xml
+t/data/ex1-2.9.0-expected.xml
 t/data/ex1.xml
 t/NKC-Transform-MARC2BIBFRAME/01-use.t
 t/NKC-Transform-MARC2BIBFRAME/02-version.t
