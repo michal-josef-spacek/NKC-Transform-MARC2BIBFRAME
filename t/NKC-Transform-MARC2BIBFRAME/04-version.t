@@ -4,7 +4,7 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean);
 use NKC::Transform::MARC2BIBFRAME;
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
 # Test.
