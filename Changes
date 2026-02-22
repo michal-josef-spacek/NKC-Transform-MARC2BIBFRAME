@@ -1,5 +1,6 @@
 0.02
  - Add 2.10.0 version of transformation.
+ - Add ACKNOWLEDGEMENTS section to doc.
  - Add check to 'xslt_transformation_file' parameter.
  - Add constructor tests.
  - Add doc stub.
