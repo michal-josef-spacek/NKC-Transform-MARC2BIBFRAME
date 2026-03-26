@@ -1,4 +1,4 @@
-0.02
+0.02 2026-03-26T22:33:54+01:00
  - Add 2.10.0 version of transformation.
  - Add ACKNOWLEDGEMENTS section to doc.
  - Add check to 'xslt_transformation_file' parameter.
