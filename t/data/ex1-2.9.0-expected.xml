@@ -25,7 +25,7 @@
         </bf:status>
         <bf:agent rdf:resource="IDSOURCE"/>
         <bf:generationProcess rdf:resource="https://github.com/lcnetdev/marc2bibframe2/releases/tag/v2.9.0"/>
-        <bf:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-03T16:59:27+02:00</bf:date>
+        <bf:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">DATE</bf:date>
       </bf:AdminMetadata>
     </bf:adminMetadata>
     <bf:adminMetadata>

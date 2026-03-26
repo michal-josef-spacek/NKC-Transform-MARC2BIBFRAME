@@ -21,10 +21,9 @@ my $ret = $obj->transform($ex1);
 $ret =~ s{(<bf:generationDate\b[^>]*>).*?(</bf:generationDate>)}{$1DATE$2};
 my $expected_string = slurp($data_dir->file('ex1-2.5.0-expected.xml')->s);
 my $expected = decode_utf8($expected_string);
-$expected =~ s{(<bf:generationDate\b[^>]*>).*?(</bf:generationDate>)}{$1DATE$2};
 is($ret, $expected, 'Compare transformed with expected (default - 2.5.0).');
 
-## Test.
+# Test.
 $obj = NKC::Transform::MARC2BIBFRAME->new(
 	'version' => '2.9.0',
 );
@@ -32,10 +31,9 @@ $ex1 = slurp($data_dir->file('ex1.xml')->s);
 $ret = $obj->transform($ex1,
 	'idsource' => "'IDSOURCE'",
 );
-$ret =~ s{(<bf:date\b[^>]*>)$act_year.*?(</bf:date>)}{$1DATE$2};
+$ret =~ s{<bf:generationProcess\b[^>]*/>\K(\s*<bf:date\b[^>]*>)[^<]*(</bf:date>)}{$1DATE$2}g;
 $expected_string = slurp($data_dir->file('ex1-2.9.0-expected.xml')->s);
 $expected = decode_utf8($expected_string);
-$expected =~ s{(<bf:date\b[^>]*>)$act_year.*?(</bf:date>)}{$1DATE$2};
 is($ret, $expected, 'Compare transformed with expected (2.9.0).');
 
 # Test.
@@ -46,8 +44,7 @@ $ex1 = slurp($data_dir->file('ex1.xml')->s);
 $ret = $obj->transform($ex1,
 	'idsource' => "'IDSOURCE'",
 );
-$ret =~ s{(<bf:date\b[^>]*>)$act_year.*?(</bf:date>)}{$1DATE$2};
+$ret =~ s{<bf:generationProcess\b[^>]*/>\K(\s*<bf:date\b[^>]*>)[^<]*(</bf:date>)}{$1DATE$2}g;
 $expected_string = slurp($data_dir->file('ex1-2.10.0-expected.xml')->s);
 $expected = decode_utf8($expected_string);
-$expected =~ s{(<bf:date\b[^>]*>)$act_year.*?(</bf:date>)}{$1DATE$2};
 is($ret, $expected, 'Compare transformed with expected (2.10.0).');
