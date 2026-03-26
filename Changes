@@ -3,7 +3,7 @@
  - Add ACKNOWLEDGEMENTS section to doc.
  - Add check to 'xslt_transformation_file' parameter.
  - Add constructor tests.
- - Add doc stub.
+ - Add doc.
  - Add tests for transform().
  - Add tests for version().
  - Add version() method.

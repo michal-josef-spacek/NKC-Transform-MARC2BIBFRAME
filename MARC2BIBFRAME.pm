@@ -83,11 +83,111 @@ sub transform {
 
 NKC::Transform::MARC2BIBFRAME - marc2bibframe transformation class.
 
+=head1 SYNOPSIS
+
+ use NKC::Transform::MARC2BIBFRAME;
+
+ my $obj = NKC::Transform::MARC2BIBFRAME->new(%params);
+ my $version = $obj->version;
+ my $bf_xml = $obj->transform($marc_xml, @params);
+
+=head1 METHODS
+
+=head2 C<new>
+
+ my $obj = NKC::Transform::MARC2BIBFRAME->new(%params);
+
+Constructor.
+
+=over 8
+
+=item * C<version>
+
+Transformation version.
+
+Default value is '2.5.0'.
+
+Default value is undef.
+
+=item * C<xslt_transformation_file>
+
+XSLT transformation file.
+
+Default value is XSLT transformation file for '2.5.0' version.
+
+=back
+
+Returns instance of object.
+
+=head2 C<version>
+
+ my $version = $obj->version;
+
+Get marc2bibframe transformation version which is set to object.
+
+Returns qr{\d\.\d\.\d} version string.
+
+=head2 C<transform>
+
+ my $bf_xml = $obj->transform($mar_xml, @params);
+
+Transform MARC to BIBFRAME.
+
+Returns BIBFRAME XML string.
+
+ new():
+         Cannot read XSLT file.
+                 XSLT file: %s
+         Parameter 'version' is undefined.
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
+
+=head1 DEPENDENCIES
+
+L<Class::Utils>,
+L<Error::Pure>,
+L<File::Spec::Functions>,
+L<File::Share>,
+L<XML::LibXML>,
+L<XML::LibXSLT>.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<NKC::Transform::BIBFRAME2MARC>
+
+bibframe2marc transformation class.
+
+=item L<NKC::Transform::MARC2RDA>
+
+marc2rda transformation class.
+
+=item L<NKC::Transform::BIBFRAME2MARC::Utils>
+
+Utilities for bibframe2marc transformations.
+
+=back
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/NKC-Transform-MARC2BIBFRAME>
+
+=head1 LICENSE AND COPYRIGHT
+
+© 2024-2026 Michal Josef Špaček
+
+BSD 2-Clause License
+
 =head1 ACKNOWLEDGEMENTS
 
 Development of this software has been made possible by institutional support
 for the long-term strategic development of the National Library of the Czech
 Republic as a research organization provided by the Ministry of Culture of
 the Czech Republic (DKRVO 2024–2028), Area 11: Linked Open Data.
+
+=head1 VERSION
+
+0.02
 
 =cut
