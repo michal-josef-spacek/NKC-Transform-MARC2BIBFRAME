@@ -4,7 +4,7 @@ use warnings;
 use File::Object;
 use NKC::Transform::MARC2BIBFRAME;
 use Perl6::Slurp qw(slurp);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 use Unicode::UTF8 qw(decode_utf8);
 
@@ -48,3 +48,16 @@ $ret =~ s{<bf:generationProcess\b[^>]*/>\K(\s*<bf:date\b[^>]*>)[^<]*(</bf:date>)
 $expected_string = slurp($data_dir->file('ex1-2.10.0-expected.xml')->s);
 $expected = decode_utf8($expected_string);
 is($ret, $expected, 'Compare transformed with expected (2.10.0).');
+
+# Test.
+$obj = NKC::Transform::MARC2BIBFRAME->new(
+	'version' => '3.0.0',
+);
+$ex1 = slurp($data_dir->file('ex1.xml')->s);
+$ret = $obj->transform($ex1,
+	'idsource' => "'IDSOURCE'",
+);
+$ret =~ s{<bf:generationProcess\b[^>]*/>\K(\s*<bf:date\b[^>]*>)[^<]*(</bf:date>)}{$1DATE$2}g;
+$expected_string = slurp($data_dir->file('ex1-3.0.0-expected.xml')->s);
+$expected = decode_utf8($expected_string);
+is($ret, $expected, 'Compare transformed with expected (3.0.0).');

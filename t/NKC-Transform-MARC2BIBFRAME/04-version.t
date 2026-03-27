@@ -4,7 +4,7 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean);
 use NKC::Transform::MARC2BIBFRAME;
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 6;
 use Test::NoWarnings;
 
 # Test.
@@ -25,6 +25,13 @@ $obj = NKC::Transform::MARC2BIBFRAME->new(
 );
 $ret = $obj->version;
 is($ret, '2.10', 'Get version (2.10).');
+
+# Test.
+$obj = NKC::Transform::MARC2BIBFRAME->new(
+	'version' => '3.0.0',
+);
+$ret = $obj->version;
+is($ret, '3.0', 'Get version (3.0).');
 
 # Test.
 eval {

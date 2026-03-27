@@ -107,7 +107,7 @@ Transformation version.
 
 Default value is '2.5.0'.
 
-Possible versions are: '2.5.0', '2.9.0' and '2.10.0'.
+Possible versions are: '2.5.0', '2.9.0', '2.10.0' and '3.0.0'.
 
 Default value is undef.
 
