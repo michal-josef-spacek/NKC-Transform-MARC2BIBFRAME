@@ -107,6 +107,8 @@ Transformation version.
 
 Default value is '2.5.0'.
 
+Possible versions are: '2.5.0', '2.9.0' and '2.10.0'.
+
 Default value is undef.
 
 =item * C<xslt_transformation_file>
