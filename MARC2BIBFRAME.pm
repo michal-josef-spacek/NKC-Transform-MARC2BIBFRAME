@@ -19,7 +19,7 @@ sub new {
 	my $self = bless {}, $class;
 
 	# Version of transformation.
-	$self->{'version'} = '2.5.0';
+	$self->{'version'} = '3.0.0';
 
 	# XSLT transformation file.
 	$self->{'xslt_transformation_file'} = undef;
