@@ -105,7 +105,7 @@ Constructor.
 
 Transformation version.
 
-Default value is '2.5.0'.
+Default value is '3.0.0'.
 
 Possible versions are: '2.5.0', '2.9.0', '2.10.0' and '3.0.0'.
 
@@ -115,7 +115,7 @@ Default value is undef.
 
 XSLT transformation file.
 
-Default value is XSLT transformation file for '2.5.0' version.
+Default value is XSLT transformation file for '3.0.0' version.
 
 =back
 
