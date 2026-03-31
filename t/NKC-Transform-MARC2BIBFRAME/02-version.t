@@ -6,4 +6,4 @@ use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Test.
-is($NKC::Transform::MARC2BIBFRAME::VERSION, 0.05, 'Version.');
+is($NKC::Transform::MARC2BIBFRAME::VERSION, 0.06, 'Version.');
