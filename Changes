@@ -1,5 +1,6 @@
 0.05
  - Fix default version in doc.
+ - Fix test dependencies.
 
 0.04 2026-03-30T09:26:18+02:00
  - Change default version to 3.0.0.
